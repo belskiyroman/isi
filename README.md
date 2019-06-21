@@ -1,27 +1,22 @@
-# IsiTest
+# isi
+Simple car list.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+---
 
-## Development server
+Тестовое задание
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Сделать страницу для создания/редактирования списка машин. Поля для создания машины(разнести по 2 отдельным вкладкам/Tab'ам):
+1й tab
+- Vehicle ID
+- Name
+2й tab
+- Model
+- Year
+- Type(Minivan, Sedan, Bus)
 
-## Code scaffolding
+На странице слева отображать список машин или надпись что машин пока что нету. При нажатии на машину -  отобразить справа данные о машине с возможностью изменить и сохранить их(локально, бекенд не нужен, валидация must have). При нажатии на кнопку Add - отображать пустую форму для машины(валидация must have), при нажатии Close - скрывать правую часть и отображать только список машин. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Требования к выполнению:
+- localStorage не использовать, ничего сверх сложного  писать НЕ НАДО;
+- Angular 5-6, Bootstrap или MaterialDesign
+- краткость, аккуратность и красота написания кода очень приветствуется;

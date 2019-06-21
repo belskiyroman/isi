@@ -1,0 +1,23 @@
+form {
+  min-width: 420px;
+}
+
+.tab-content {
+  padding: 20px;
+}
+
+.control {
+  padding: 20px;
+
+  & > *:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+mat-error {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}

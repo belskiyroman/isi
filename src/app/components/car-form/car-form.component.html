@@ -1,0 +1,26 @@
+<form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab label="General">
+      <div class="tab-content">
+        <app-car-form-base [formGroup]="baseInfo"></app-car-form-base>
+        <mat-error [ngClass]="{visible: isTrySubmit && detailInfo.invalid && detailInfo.touched}">
+          You must complete both tabs.
+        </mat-error>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Detail">
+      <div class="tab-content">
+        <app-car-form-detail [carTypes]="types" [formGroup]="detailInfo"></app-car-form-detail>
+        <mat-error [ngClass]="{visible: isTrySubmit && baseInfo.invalid && baseInfo.touched}">
+          You must complete both tabs.
+        </mat-error>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <div class="control">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-raised-button color="warn" type="button" (click)="onClose()">Close</button>
+  </div>
+</form>

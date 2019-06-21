@@ -1,0 +1,20 @@
+<div class="empty-list" *ngIf="!(cars$ | async).length">
+  <h2>no cars...</h2>
+</div>
+
+<mat-card class="card" matRipple *ngFor="let car of cars$ | async; trackBy: trackByCar" (click)="edit(car)">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>{{car.model}}</mat-card-title>
+    <mat-card-subtitle>{{car.fullName}}</mat-card-subtitle>
+    <button mat-button (click)="edit(car)">edit</button>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list class="list" role="list">
+      <mat-list-item role="listitem"><b>Model:</b>&nbsp;{{car.model}}</mat-list-item>
+      <mat-list-item role="listitem"><b>Year:</b>&nbsp;{{car.year}}</mat-list-item>
+      <mat-list-item role="listitem"><b>Type:</b>&nbsp;{{car.typeName}}</mat-list-item>
+      <mat-list-item role="listitem"><b>vehicleID:</b>&nbsp;{{car.vehicleID}}</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.header-image {
+  background-image: url('/assets/avatar.gif');
+  background-size: cover;
+}
+
+mat-card-header {
+  display: flex;
+}
+
+.mat-card-header-text {
+  flex-grow: 1;
+}
+
+.list mat-list-item {
+  height: 28px;
+}
+
+.empty-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}

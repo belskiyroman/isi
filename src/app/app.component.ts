@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DrawerService} from './services/drawer.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'isi-test';
+  public readonly title = 'isi-test';
+
+  constructor(
+    private carForm: DrawerService,
+  ) {}
+
 }
